@@ -82,3 +82,26 @@ function toggleSelect(event) {
 
     input.value = button.dataset.value
 }
+
+//desafio do Mayk Brito para validação de latitude e longitude antes de enviar o formulário para o BD
+function validate(event) {
+    // pegar o campo de lat e lng
+    const lat = document.querySelector('[name="lat"]').value
+    const lng = document.querySelector('[name="lng"]').value
+    
+     //validar se lat e lng estão preenchidos
+    const needsLatAndLng = lat == "" || lng == "" ;
+    
+    //se o value estiver vazio 
+    if (needsLatAndLng) {
+        event.preventDefault()
+        alert('Selecione um ponto no mapa!')
+    }
+
+    
+
+   
+
+        
+    
+}
